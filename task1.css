@@ -435,6 +435,10 @@ label {
   /* padding: 10px; */
 }
 
+.cardModel:hover{
+  
+}
+
 .modelLogo {
   width: 100%; /* Make the image take the full width of its container */
   height: auto; /* Maintain aspect ratio */
