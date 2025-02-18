@@ -7,12 +7,14 @@
   font-family: "Amazon Ember1";
   src: url("Font/Amazon Ember Cd RC.otf") format("opentype");
 }
+
 @font-face {
   font-family: "Amazon Ember Bold";
   src: url("Font/Amazon\ Ember\ Mono\ Bold.ttf") format("opentype");
 }
 body {
   background-color: rgb(255, 255, 255);
+  /* background-color: rgb(19, 25, 33); */
   /* padding: 5px; */
   margin: 0;
   font-family: "Amazon Ember";
@@ -24,7 +26,12 @@ body {
 label {
   color: rgb(255, 255, 255);
 }
-
+.navContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
 .navBar {
   background-color: rgb(19, 25, 33);
   display: flex;
@@ -283,6 +290,7 @@ label {
   align-self: center;
   margin-bottom: 5px;
   margin-right: 5px;
+  transform: scale(0.8);
 }
 
 .toggleInput {
@@ -306,7 +314,7 @@ label {
   position: absolute;
   width: 20px;
   height: 20px;
-  background: white;
+  background: rgb(255, 255, 255);
   border-radius: 50%;
   top: 2.5px;
   left: 3px;
@@ -322,10 +330,6 @@ label {
 }
 
 /* Responsiveness code heree */
-
-
-
-
 
 @media screen and (max-width: 1000px) {
   .usaDiv,
@@ -368,11 +372,9 @@ label {
   .navList {
     gap: 0px;
   }
-  
 }
 
 @media screen and (max-width: 600px) {
-
   .searchCategory {
     display: none;
   }
@@ -387,33 +389,138 @@ label {
   }
 }
 
-
 @media screen and (max-width: 500px) {
-
   .toggleContainer {
     transform: scale(0.7);
   }
-  .image{
+  .image {
     display: none;
   }
-  .navBar{
+  .navBar {
     padding: 15px;
   }
 }
 
-
-
 @media screen and (max-width: 400px) {
-
   .navListLabel:nth-last-child(-n + 7) {
     display: none;
   }
 }
 
-
 @media screen and (max-width: 350px) {
-
   .navListLabel:nth-last-child(-n + 8) {
     display: none;
   }
+}
+
+/* ---------------------------------- */
+
+.mainContainer {
+  padding: 10px;
+  padding-top: 115px;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  /* box-flex-group: 3; */
+}
+
+.cardModel {
+  width: 321px;
+  background-color: #f7f7f7;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; Ensures content is spaced out */
+  /* height: auto; Set a fixed height if needed */
+  /* padding: 10px; */
+}
+
+.modelLogo {
+  width: 100%; /* Make the image take the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+.details{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 8px;
+}
+
+.discription {  
+  font-family: "Amazon Ember1";
+  color: black;
+  text-align: left;
+}
+.ratingClass{
+  align-self: self-start;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 5px;
+}
+.rating {
+  width: 10px;
+}
+
+.date {  
+  font-family: "Amazon Ember";
+  font-size: 13px;
+  color: black;
+  text-align: center;
+  align-self: self-start;
+  font-weight: 600;
+}
+
+
+.price {  
+  font-family: "Amazon Ember";
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  align-self: self-start;
+}
+
+
+
+
+.addCartBtn, .removeCartBtn {
+  font-family: "Amazon Ember1";
+  font-size: 12px;
+  padding: 8px;
+  width: 48%;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.addCartBtn {
+  background-color: #ffa939;
+}
+
+.addCartBtn:hover {
+  background-color: #ff9b17; 
+  color: black;
+}
+
+.removeCartBtn {
+  color: grey;
+  border: 1px solid rgb(19, 25, 33);
+}
+
+.removeCartBtn:hover {
+  background-color: #333;
+  color: #ffa734;
+}
+
+.btnClass {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+  gap: 10px;
+  margin-top: auto;
 }
