@@ -1,0 +1,530 @@
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("Font/Amazon Ember Cd RC Thin.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Amazon Ember1";
+  src: url("Font/Amazon Ember Cd RC.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Amazon Ember Bold";
+  src: url("Font/Amazon\ Ember\ Mono\ Bold.ttf") format("opentype");
+}
+body {
+  background-color: rgb(255, 255, 255);
+  /* background-color: rgb(19, 25, 33); */
+  /* padding: 5px; */
+  margin: 0;
+  font-family: "Amazon Ember";
+}
+
+/* div {
+  background-color: rgb(19, 25, 33);
+} */
+label {
+  color: rgb(255, 255, 255);
+}
+.navContainer {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.navBar {
+  background-color: rgb(19, 25, 33);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* padding-top: 19px; */
+}
+
+.logo {
+  width: 100px;
+}
+.image {
+  padding-top: 19px;
+  padding-left: 12px;
+  padding-bottom: 5px;
+  background-color: rgb(19, 25, 33);
+}
+
+/* .logo:hover {
+  border: 1px solid white; 
+} */
+
+.deliveryDiv {
+  /* padding-top: 19px; */
+  padding-left: 20px;
+  align-self: center;
+  justify-content: center;
+  width: 80px;
+  font-size: small;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2px;
+  background-color: rgb(19, 25, 33);
+}
+
+/* .deliveryDiv:hover {
+  border: 0.5px solid white;
+} */
+
+.locationLogo {
+  width: 25px;
+}
+
+.deliveryLabel {
+  /* font-weight: bold; */
+  font-size: 13px;
+}
+.pakLabel {
+  font-family: "Amazon Ember1";
+  font-size: medium;
+}
+
+.searchBar {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  width: 100%;
+  background-color: rgb(19, 25, 33);
+}
+
+.searchCategory {
+  font-family: "Amazon Ember1";
+  padding: 8px;
+  border: none;
+  background-color: #d8d8d8;
+  cursor: pointer;
+  outline: none;
+  width: 60px;
+  height: 39px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  color: #6c6c6c;
+}
+
+.searchCategory:hover {
+  color: #363636;
+  background-color: #cbcbcb;
+}
+
+.searchInput {
+  font-family: "Amazon Ember1";
+  flex-grow: 1;
+  padding: 8px;
+  height: 23px;
+  max-width: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.searchButton {
+  padding: 3px 7px;
+  background: #febd69;
+  border: none;
+  cursor: pointer;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.searchButton:hover {
+  background: #ffa734;
+}
+.searchButton img {
+  width: 30px;
+}
+
+.usaDiv {
+  padding-left: 20px;
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(19, 25, 33);
+}
+
+.countryCategory {
+  font-family: "Amazon Ember1";
+  background-color: rgb(19, 25, 33);
+  color: #ffffff;
+  font-size: medium;
+  /* font-weight: bold; */
+  width: 40px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+/* 
+.usaDiv:hover {
+  border: 1px solid #ffffff;
+} */
+
+.usaLogo {
+  width: 25px;
+}
+
+.helloDiv {
+  padding-left: 15px;
+  /* align-self: center; */
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(19, 25, 33);
+}
+
+.helloLabel {
+  /* font-weight: bold; */
+  font-family: "Amazon Ember";
+  font-size: 13px;
+  padding-left: 3px;
+}
+
+.accountCategory {
+  font-family: "Amazon Ember1";
+  font-size: medium;
+  background-color: rgb(19, 25, 33);
+  color: #ffffff;
+  font-size: medium;
+  /* font-weight: bold; */
+  width: 115px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.returnDiv {
+  padding-left: 15px;
+  /* align-self: center; */
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  width: 80px;
+  background-color: rgb(19, 25, 33);
+}
+
+.returnLabel {
+  /* font-weight: bold; */
+  font-family: "Amazon Ember";
+  font-size: 13px;
+}
+
+.orderLabel {
+  /* font-weight: bold; */
+  font-family: "Amazon Ember1";
+  font-size: 13px;
+}
+
+.cartDiv {
+  padding-left: 20px;
+  align-self: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 15px;
+  background-color: rgb(19, 25, 33);
+}
+
+.cartLogo {
+  width: 25px;
+}
+
+.cartLabel {
+  padding-left: 5px;
+  font-family: "Amazon Ember1";
+  font-size: 18px;
+  color: #ffa734;
+}
+
+.navList {
+  /* background-color: rgb(35, 47, 62);
+  padding: 5px; */
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  align-items: center;
+  align-self: center;
+}
+
+.navListLabel {
+  padding-top: 3px;
+  font-family: "Amazon Ember1";
+  color: #ededed;
+}
+
+.navListLabel:hover {
+  border: 1px solid #ffffff;
+}
+
+.menuLogo {
+  width: 30px;
+}
+
+.menuLogo:hover {
+  border: 1px solid #ffffff;
+}
+
+.navBar2 {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(35, 47, 62);
+  padding: 5px;
+}
+
+/* ----------------- */
+
+.toggleContainer {
+  position: relative;
+  width: 50px;
+  height: 25px;
+  align-items: center;
+  align-self: center;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  transform: scale(0.8);
+}
+
+.toggleInput {
+  display: none;
+}
+
+.toggleLabel {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgb(35, 47, 62);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+  border: 2px solid rgb(19, 25, 33);
+}
+
+.toggleLabel::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: rgb(255, 255, 255);
+  border-radius: 50%;
+  top: 2.5px;
+  left: 3px;
+  transition: 0.3s;
+}
+
+.toggleInput:checked + .toggleLabel {
+  background: rgb(19, 25, 33);
+}
+
+.toggleInput:checked + .toggleLabel::before {
+  left: 26px;
+}
+
+/* Responsiveness code heree */
+
+@media screen and (max-width: 1000px) {
+  .usaDiv,
+  .helloDiv,
+  .returnDiv,
+  .deliveryDiv {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .image {
+    transform: scale(0.8);
+  }
+  .toggleContainer {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navListLabel:nth-last-child(-n + 2) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navListLabel:nth-last-child(-n + 4) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navListLabel {
+    transform: scale(0.8);
+    gap: 0px;
+  }
+  .navListLabel:nth-last-child(-n + 6) {
+    display: none;
+  }
+  .navList {
+    gap: 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .searchCategory {
+    display: none;
+  }
+  .searchInput {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 15px;
+  }
+
+  .searchButton img {
+    width: 23px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .toggleContainer {
+    transform: scale(0.7);
+  }
+  .image {
+    display: none;
+  }
+  .navBar {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navListLabel:nth-last-child(-n + 7) {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .navListLabel:nth-last-child(-n + 8) {
+    display: none;
+  }
+}
+
+/* ---------------------------------- */
+
+.mainContainer {
+  padding: 10px;
+  padding-top: 115px;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  /* box-flex-group: 3; */
+}
+
+.cardModel {
+  width: 321px;
+  background-color: #f7f7f7;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; Ensures content is spaced out */
+  /* height: auto; Set a fixed height if needed */
+  /* padding: 10px; */
+}
+
+.cardModel:hover{
+  
+}
+
+.modelLogo {
+  width: 100%; /* Make the image take the full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+.details{
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 8px;
+}
+
+.discription {  
+  font-family: "Amazon Ember1";
+  color: black;
+  text-align: left;
+}
+.ratingClass{
+  align-self: self-start;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 5px;
+}
+.rating {
+  width: 10px;
+}
+
+.date {  
+  font-family: "Amazon Ember";
+  font-size: 13px;
+  color: black;
+  text-align: center;
+  align-self: self-start;
+  font-weight: 600;
+}
+
+
+.price {  
+  font-family: "Amazon Ember";
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  align-self: self-start;
+}
+
+
+
+
+.addCartBtn, .removeCartBtn {
+  font-family: "Amazon Ember1";
+  font-size: 12px;
+  padding: 8px;
+  width: 48%;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s; 
+}
+
+.addCartBtn {
+  background-color: #ffa939;
+}
+
+.addCartBtn:hover {
+  background-color: #ff9b17; 
+  color: black;
+}
+
+.removeCartBtn {
+  color: grey;
+  border: 1px solid rgb(19, 25, 33);
+}
+
+.removeCartBtn:hover {
+  background-color: #333;
+  color: #ffa734;
+}
+
+.btnClass {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+  gap: 10px;
+  margin-top: auto;
+}
