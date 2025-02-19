@@ -52,7 +52,7 @@ const cardData = [
       'Gaiam Pilates Ring 15" Fitness Circle - Lightweight & Durable Foam Padded Handles | Flexible Resistance Exercise Equipment for Toning Arms',
     rating: 2,
     date: "December 23, 2025",
-    price: "899$",
+    price: "550$",
   },
   {
     imageSrc: "/Assets/jack-anstey-XVoyX7l9ocY-unsplash.jpg",
@@ -60,7 +60,7 @@ const cardData = [
       'Gaiam Pilates Ring 15" Fitness Circle - Lightweight & Durable Foam Padded Handles | Flexible Resistance Exercise Equipment for Toning Arms',
     rating: 2,
     date: "December 23, 2025",
-    price: "899$",
+    price: "89$",
   },
   {
     imageSrc: "/Assets/johannes-plenio-RwHv7LgeC7s-unsplash.jpg",
@@ -68,7 +68,7 @@ const cardData = [
       'Gaiam Pilates Ring 15" Fitness Circle - Lightweight & Durable Foam Padded Handles | Flexible Resistance Exercise Equipment for Toning Arms',
     rating: 2,
     date: "December 23, 2025",
-    price: "899$",
+    price: "199$",
   },
   {
     imageSrc: "/Assets/kace-rodriguez-p3OzJuT_Dks-unsplash.jpg",
@@ -84,14 +84,14 @@ const cardData = [
       'Gaiam Pilates Ring 15" Fitness Circle - Lightweight & Durable Foam Padded Handles | Flexible Resistance Exercise Equipment for Toning Arms',
     rating: 2,
     date: "December 23, 2025",
-    price: "899$",
+    price: "999$",
   },
   {
     imageSrc: "/Assets/luca-bravo-ii5JY_46xH0-unsplash.jpg",
     description: "Explore the beauty of nature with this stunning landscape.",
     rating: 4,
     date: "January 15, 2024",
-    price: "499$",
+    price: "1499$",
   },
   {
     imageSrc: "/Assets/luca-bravo-zAjdgNXsMeg-unsplash.jpg",
@@ -145,7 +145,7 @@ const cardData = [
   // Add more card objects as needed
 ];
 
-console.log(cardData);
+// console.log(cardData);
 
 function renderCards() {
   const mainContainer = document.querySelector(".mainContainer");
@@ -182,3 +182,27 @@ function renderCards() {
 }
 
 renderCards();
+
+
+
+document.querySelectorAll('.addCartBtn').forEach(button => {
+    button.addEventListener('click', addCart);
+});
+
+document.querySelectorAll('.removeCartBtn').forEach(button => {
+    button.addEventListener('click', removeCart);
+});
+
+function addCart() {
+    let ele = document.getElementById('cartId');
+    let currentCount = parseInt(ele.textContent, 10);
+    ele.textContent = currentCount + 1; 
+}
+
+function removeCart() {
+    let ele = document.getElementById('cartId');
+    let currentCount = parseInt(ele.textContent, 10);
+    if (currentCount > 0) {
+        ele.textContent = currentCount - 1; 
+    }
+}

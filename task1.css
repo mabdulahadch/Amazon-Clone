@@ -413,15 +413,16 @@ label {
   }
 }
 
-/* ---------------------------------- */
 
+
+/* ---------------------------------- */
+/* 
 .mainContainer {
   padding: 10px;
   padding-top: 115px;
   gap: 10px;
   display: flex;
   flex-wrap: wrap;
-  /* box-flex-group: 3; */
 }
 
 .cardModel {
@@ -430,22 +431,21 @@ label {
   border-radius: 7px;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; Ensures content is spaced out */
-  /* height: auto; Set a fixed height if needed */
-  /* padding: 10px; */
 }
 
-.cardModel:hover{
-  
-}
-
+.cardModel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+} */
+/* 
 .modelLogo {
-  width: 100%; /* Make the image take the full width of its container */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image covers the entire container */
+  width: 100%; 
+  height: auto; 
+  object-fit: cover;
 }
 
-.details{
+.details {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -454,12 +454,12 @@ label {
   gap: 8px;
 }
 
-.discription {  
+.discription {
   font-family: "Amazon Ember1";
   color: black;
   text-align: left;
 }
-.ratingClass{
+.ratingClass {
   align-self: self-start;
   display: flex;
   justify-content: space-between;
@@ -470,7 +470,7 @@ label {
   width: 10px;
 }
 
-.date {  
+.date {
   font-family: "Amazon Ember";
   font-size: 13px;
   color: black;
@@ -479,8 +479,7 @@ label {
   font-weight: 600;
 }
 
-
-.price {  
+.price {
   font-family: "Amazon Ember";
   font-size: 30px;
   font-weight: 600;
@@ -488,10 +487,8 @@ label {
   align-self: self-start;
 }
 
-
-
-
-.addCartBtn, .removeCartBtn {
+.addCartBtn,
+.removeCartBtn {
   font-family: "Amazon Ember1";
   font-size: 12px;
   padding: 8px;
@@ -499,7 +496,7 @@ label {
   border-radius: 5px;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; 
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .addCartBtn {
@@ -507,7 +504,7 @@ label {
 }
 
 .addCartBtn:hover {
-  background-color: #ff9b17; 
+  background-color: #ff9b17;
   color: black;
 }
 
@@ -524,7 +521,130 @@ label {
 .btnClass {
   display: flex;
   justify-content: space-between;
-  width: 100%; 
+  width: 100%;
   gap: 10px;
   margin-top: auto;
+} */
+
+
+
+.mainContainer {
+  padding: 10px;
+  padding-top: 115px;
+  gap: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+.cardModel {
+  width: calc(20% - 10px); /* Five cards per row */
+  background-color: #f7f7f7;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  /* padding: 10px; */
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  /* transition: transform 0.3s ease, box-shadow 0.3s ease; */
+}
+
+.cardModel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modelLogo {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 8px;
+}
+
+.discription {
+  font-family: "Amazon Ember1";
+  font-size: 14px;
+  color: black;
+  text-align: left;
+}
+
+.ratingClass {
+  align-self: self-start;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.rating {
+  width: 10px;
+}
+
+/* .date, .price {
+  font-size: 14px;
+  font-weight: bold;
+} */
+.date {
+  font-family: "Amazon Ember";
+  font-size: 13px;
+  color: black;
+  text-align: center;
+  align-self: self-start;
+  font-weight: 600;
+}
+
+.price {
+  font-family: "Amazon Ember";
+  font-size: 30px;
+  font-weight: 600;
+  color: black;
+  align-self: self-start;
+}
+
+.btnClass {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.addCartBtn, .removeCartBtn {
+  padding: 8px;
+  width: 48%;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.addCartBtn {
+  background-color: #ffa939;
+}
+
+.removeCartBtn {
+  background-color: #ccc;
+}
+
+@media (max-width: 1024px) {
+  .cardModel {
+      width: calc(25% - 10px); /* Four cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .cardModel {
+      width: calc(33.33% - 10px); /* Three cards per row */
+  }
+}
+
+@media (max-width: 480px) {
+  .cardModel {
+      width: calc(50% - 10px); /* Two cards per row */
+  }
 }
