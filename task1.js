@@ -1,40 +1,40 @@
 console.log("JavaScript is running");
 
 document.getElementById("toggle").addEventListener("change", function () {
-    let models = document.querySelectorAll(".cardModel");
-    let dates = document.querySelectorAll(".date");
-    let prices = document.querySelectorAll(".price");
-    let descriptions = document.querySelectorAll(".discription");
+  let models = document.querySelectorAll(".cardModel");
+  let dates = document.querySelectorAll(".date");
+  let prices = document.querySelectorAll(".price");
+  let descriptions = document.querySelectorAll(".discription");
 
-    if (this.checked) {
-        document.body.style.backgroundColor = "rgb(19, 25, 33)";
-        models.forEach((model) => {
-            model.style.backgroundColor = "rgb(35, 47, 62)";
-        });
-        dates.forEach((date) => {
-            date.style.color = "white";
-        });
-        prices.forEach((price) => {
-            price.style.color = "white";
-        });
-        descriptions.forEach((description) => {
-            description.style.color = "white";
-        });
-    } else {
-        document.body.style.backgroundColor = "white";
-        models.forEach((model) => {
-            model.style.backgroundColor = "#f7f7f7";
-        });
-        dates.forEach((date) => {
-            date.style.color = "black";
-        });
-        prices.forEach((price) => {
-            price.style.color = "black";
-        });
-        descriptions.forEach((description) => {
-            description.style.color = "black";
-        });
-    }
+  if (this.checked) {
+    document.body.style.backgroundColor = "rgb(19, 25, 33)";
+    models.forEach((model) => {
+      model.style.backgroundColor = "rgb(35, 47, 62)";
+    });
+    dates.forEach((date) => {
+      date.style.color = "white";
+    });
+    prices.forEach((price) => {
+      price.style.color = "white";
+    });
+    descriptions.forEach((description) => {
+      description.style.color = "white";
+    });
+  } else {
+    document.body.style.backgroundColor = "white";
+    models.forEach((model) => {
+      model.style.backgroundColor = "#f7f7f7";
+    });
+    dates.forEach((date) => {
+      date.style.color = "black";
+    });
+    prices.forEach((price) => {
+      price.style.color = "black";
+    });
+    descriptions.forEach((description) => {
+      description.style.color = "black";
+    });
+  }
 });
 
 const cardData = [
@@ -165,14 +165,14 @@ function renderCards() {
                 <div class="discription">${card.description}</div>
                 <div class="ratingClass">
                     ${'<img class="rating" src="/Assets/star.png" alt="amazon logo">'.repeat(
-                    card.rating
+                      card.rating
                     )}
                 </div>
                 <div class="date">${card.date}</div>
                 <div class="price">${card.price}</div>
                 <div class="btnClass">
-                    <div class="addCartBtn">Add to Cart</div>
-                    <div class="removeCartBtn">Remove from Cart</div>
+                    <div class="addCartBtn">Add</div>
+                    <div class="removeCartBtn">Remove</div>
                 </div>
             </div>
         `;
@@ -182,7 +182,6 @@ function renderCards() {
 }
 
 renderCards();
-
 
 
 document.querySelectorAll('.addCartBtn').forEach(button => {
@@ -196,13 +195,13 @@ document.querySelectorAll('.removeCartBtn').forEach(button => {
 function addCart() {
     let ele = document.getElementById('cartId');
     let currentCount = parseInt(ele.textContent, 10);
-    ele.textContent = currentCount + 1; 
+    ele.textContent = currentCount + 1;
 }
 
 function removeCart() {
     let ele = document.getElementById('cartId');
     let currentCount = parseInt(ele.textContent, 10);
     if (currentCount > 0) {
-        ele.textContent = currentCount - 1; 
+        ele.textContent = currentCount - 1;
     }
 }
