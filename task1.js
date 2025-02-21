@@ -1,40 +1,40 @@
 console.log("JavaScript is running");
 
 document.getElementById("toggle").addEventListener("change", function () {
-    let models = document.querySelectorAll(".cardModel");
-    let dates = document.querySelectorAll(".date");
-    let prices = document.querySelectorAll(".price");
-    let descriptions = document.querySelectorAll(".discription");
+  let models = document.querySelectorAll(".cardModel");
+  let dates = document.querySelectorAll(".date");
+  let prices = document.querySelectorAll(".price");
+  let descriptions = document.querySelectorAll(".discription");
 
-    if (this.checked) {
-        document.body.style.backgroundColor = "rgb(19, 25, 33)";
-        models.forEach((model) => {
-            model.style.backgroundColor = "rgb(35, 47, 62)";
-        });
-        dates.forEach((date) => {
-            date.style.color = "white";
-        });
-        prices.forEach((price) => {
-            price.style.color = "white";
-        });
-        descriptions.forEach((description) => {
-            description.style.color = "white";
-        });
-    } else {
-        document.body.style.backgroundColor = "white";
-        models.forEach((model) => {
-            model.style.backgroundColor = "#f7f7f7";
-        });
-        dates.forEach((date) => {
-            date.style.color = "black";
-        });
-        prices.forEach((price) => {
-            price.style.color = "black";
-        });
-        descriptions.forEach((description) => {
-            description.style.color = "black";
-        });
-    }
+  if (this.checked) {
+    document.body.style.backgroundColor = "rgb(19, 25, 33)";
+    models.forEach((model) => {
+      model.style.backgroundColor = "rgb(35, 47, 62)";
+    });
+    dates.forEach((date) => {
+      date.style.color = "white";
+    });
+    prices.forEach((price) => {
+      price.style.color = "white";
+    });
+    descriptions.forEach((description) => {
+      description.style.color = "white";
+    });
+  } else {
+    document.body.style.backgroundColor = "white";
+    models.forEach((model) => {
+      model.style.backgroundColor = "#f7f7f7";
+    });
+    dates.forEach((date) => {
+      date.style.color = "black";
+    });
+    prices.forEach((price) => {
+      price.style.color = "black";
+    });
+    descriptions.forEach((description) => {
+      description.style.color = "black";
+    });
+  }
 });
 
 const cardData = [
@@ -52,7 +52,7 @@ const cardData = [
       'Gaiam Pilates Ring 15" Fitness Circle - Lightweight & Durable Foam Padded Handles | Flexible Resistance Exercise Equipment for Toning Arms',
     rating: 2,
     date: "December 23, 2025",
-    price: "899$",
+    price: "550$",
   },
   {
     imageSrc: "/Assets/jack-anstey-XVoyX7l9ocY-unsplash.jpg",
@@ -60,7 +60,7 @@ const cardData = [
       'Gaiam Pilates Ring 15" Fitness Circle - Lightweight & Durable Foam Padded Handles | Flexible Resistance Exercise Equipment for Toning Arms',
     rating: 2,
     date: "December 23, 2025",
-    price: "899$",
+    price: "89$",
   },
   {
     imageSrc: "/Assets/johannes-plenio-RwHv7LgeC7s-unsplash.jpg",
@@ -68,7 +68,7 @@ const cardData = [
       'Gaiam Pilates Ring 15" Fitness Circle - Lightweight & Durable Foam Padded Handles | Flexible Resistance Exercise Equipment for Toning Arms',
     rating: 2,
     date: "December 23, 2025",
-    price: "899$",
+    price: "199$",
   },
   {
     imageSrc: "/Assets/kace-rodriguez-p3OzJuT_Dks-unsplash.jpg",
@@ -84,14 +84,14 @@ const cardData = [
       'Gaiam Pilates Ring 15" Fitness Circle - Lightweight & Durable Foam Padded Handles | Flexible Resistance Exercise Equipment for Toning Arms',
     rating: 2,
     date: "December 23, 2025",
-    price: "899$",
+    price: "999$",
   },
   {
     imageSrc: "/Assets/luca-bravo-ii5JY_46xH0-unsplash.jpg",
     description: "Explore the beauty of nature with this stunning landscape.",
     rating: 4,
     date: "January 15, 2024",
-    price: "499$",
+    price: "1499$",
   },
   {
     imageSrc: "/Assets/luca-bravo-zAjdgNXsMeg-unsplash.jpg",
@@ -145,7 +145,7 @@ const cardData = [
   // Add more card objects as needed
 ];
 
-console.log(cardData);
+// console.log(cardData);
 
 function renderCards() {
   const mainContainer = document.querySelector(".mainContainer");
@@ -165,14 +165,14 @@ function renderCards() {
                 <div class="discription">${card.description}</div>
                 <div class="ratingClass">
                     ${'<img class="rating" src="/Assets/star.png" alt="amazon logo">'.repeat(
-                    card.rating
+                      card.rating
                     )}
                 </div>
                 <div class="date">${card.date}</div>
                 <div class="price">${card.price}</div>
                 <div class="btnClass">
-                    <div class="addCartBtn">Add to Cart</div>
-                    <div class="removeCartBtn">Remove from Cart</div>
+                    <div class="addCartBtn">Add</div>
+                    <div class="removeCartBtn">Remove</div>
                 </div>
             </div>
         `;
@@ -182,3 +182,26 @@ function renderCards() {
 }
 
 renderCards();
+
+
+document.querySelectorAll('.addCartBtn').forEach(button => {
+    button.addEventListener('click', addCart);
+});
+
+document.querySelectorAll('.removeCartBtn').forEach(button => {
+    button.addEventListener('click', removeCart);
+});
+
+function addCart() {
+    let ele = document.getElementById('cartId');
+    let currentCount = parseInt(ele.textContent, 10);
+    ele.textContent = currentCount + 1;
+}
+
+function removeCart() {
+    let ele = document.getElementById('cartId');
+    let currentCount = parseInt(ele.textContent, 10);
+    if (currentCount > 0) {
+        ele.textContent = currentCount - 1;
+    }
+}

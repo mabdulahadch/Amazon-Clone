@@ -246,8 +246,7 @@ label {
 }
 
 .navList {
-  /* background-color: rgb(35, 47, 62);
-  padding: 5px; */
+   /* background-color: rgb(35, 47, 62); */
   display: flex;
   flex-direction: row;
   gap: 15px;
@@ -330,8 +329,7 @@ label {
 }
 
 /* Responsiveness code heree */
-
-@media screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
   .usaDiv,
   .helloDiv,
   .returnDiv,
@@ -340,7 +338,7 @@ label {
   }
 }
 
-@media screen and (max-width: 700px) {
+@media (max-width: 700px) {
   .image {
     transform: scale(0.8);
   }
@@ -349,19 +347,19 @@ label {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
   .navListLabel:nth-last-child(-n + 2) {
     display: none;
   }
 }
 
-@media screen and (max-width: 800px) {
+@media (max-width: 800px) {
   .navListLabel:nth-last-child(-n + 4) {
     display: none;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .navListLabel {
     transform: scale(0.8);
     gap: 0px;
@@ -374,7 +372,7 @@ label {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .searchCategory {
     display: none;
   }
@@ -389,7 +387,7 @@ label {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
   .toggleContainer {
     transform: scale(0.7);
   }
@@ -401,51 +399,52 @@ label {
   }
 }
 
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
   .navListLabel:nth-last-child(-n + 7) {
     display: none;
   }
 }
 
-@media screen and (max-width: 350px) {
+@media (max-width: 350px) {
   .navListLabel:nth-last-child(-n + 8) {
     display: none;
   }
 }
 
-/* ---------------------------------- */
 
+
+/* ---------------------------------- */
 .mainContainer {
-  padding: 10px;
+  /* padding-top: 10px; */
   padding-top: 115px;
+  padding-left: 10px;
   gap: 10px;
   display: flex;
   flex-wrap: wrap;
-  /* box-flex-group: 3; */
+  /* justify-content: center; */
 }
 
 .cardModel {
-  width: 321px;
+  width: calc(20% - 10px); /* Five cards per row */
   background-color: #f7f7f7;
   border-radius: 7px;
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; Ensures content is spaced out */
-  /* height: auto; Set a fixed height if needed */
-  /* padding: 10px; */
 }
 
-.cardModel:hover{
-  
+.cardModel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .modelLogo {
-  width: 100%; /* Make the image take the full width of its container */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: cover; /* Ensure the image covers the entire container */
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-.details{
+.details {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -454,23 +453,25 @@ label {
   gap: 8px;
 }
 
-.discription {  
+.discription {
   font-family: "Amazon Ember1";
+  font-size: 14px;
   color: black;
   text-align: left;
 }
-.ratingClass{
+
+.ratingClass {
   align-self: self-start;
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   gap: 5px;
 }
+
 .rating {
   width: 10px;
 }
 
-.date {  
+.date {
   font-family: "Amazon Ember";
   font-size: 13px;
   color: black;
@@ -479,8 +480,7 @@ label {
   font-weight: 600;
 }
 
-
-.price {  
+.price {
   font-family: "Amazon Ember";
   font-size: 30px;
   font-weight: 600;
@@ -489,17 +489,16 @@ label {
 }
 
 
-
-
-.addCartBtn, .removeCartBtn {
+.addCartBtn, 
+.removeCartBtn {
   font-family: "Amazon Ember1";
   font-size: 12px;
   padding: 8px;
   width: 48%;
-  border-radius: 5px;
   text-align: center;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.3s; 
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .addCartBtn {
@@ -507,7 +506,7 @@ label {
 }
 
 .addCartBtn:hover {
-  background-color: #ff9b17; 
+  background-color: #ff9b17;
   color: black;
 }
 
@@ -524,7 +523,31 @@ label {
 .btnClass {
   display: flex;
   justify-content: space-between;
-  width: 100%; 
+  width: 100%;
   gap: 10px;
   margin-top: auto;
+}
+
+@media (max-width: 1200px) {
+  .cardModel {
+      width: calc(25% - 10px); 
+  }
+}
+
+@media (max-width: 900px) {
+  .cardModel {
+      width: calc(33.33% - 10px);
+  }
+}
+
+@media (max-width: 600px) {
+  .cardModel {
+      width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 450px) {
+  .cardModel {
+      width: calc(100% - 10px);
+  }
 }
