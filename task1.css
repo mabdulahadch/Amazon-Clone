@@ -8,30 +8,24 @@
   src: url("Font/Amazon Ember Cd RC.otf") format("opentype");
 }
 
-@font-face {
-  font-family: "Amazon Ember Bold";
-  src: url("Font/Amazon\ Ember\ Mono\ Bold.ttf") format("opentype");
-}
+
 body {
   background-color: rgb(255, 255, 255);
-  /* background-color: rgb(19, 25, 33); */
-  /* padding: 5px; */
   margin: 0;
   font-family: "Amazon Ember";
 }
 
-/* div {
-  background-color: rgb(19, 25, 33);
-} */
 label {
   color: rgb(255, 255, 255);
 }
+
 .navContainer {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
 }
+
 .navBar {
   background-color: rgb(19, 25, 33);
   display: flex;
@@ -43,6 +37,7 @@ label {
 .logo {
   width: 100px;
 }
+
 .image {
   padding-top: 19px;
   padding-left: 12px;
@@ -50,14 +45,9 @@ label {
   background-color: rgb(19, 25, 33);
 }
 
-/* .logo:hover {
-  border: 1px solid white; 
-} */
-
 .deliveryDiv {
-  /* padding-top: 19px; */
   padding-left: 20px;
-  align-self: center;
+  /* align-self: center; */
   justify-content: center;
   width: 80px;
   font-size: small;
@@ -68,18 +58,14 @@ label {
   background-color: rgb(19, 25, 33);
 }
 
-/* .deliveryDiv:hover {
-  border: 0.5px solid white;
-} */
-
 .locationLogo {
   width: 25px;
 }
 
 .deliveryLabel {
-  /* font-weight: bold; */
   font-size: 13px;
 }
+
 .pakLabel {
   font-family: "Amazon Ember1";
   font-size: medium;
@@ -125,7 +111,7 @@ label {
 }
 
 .searchButton {
-  padding: 3px 7px;
+  padding: 3px 7px; 
   background: #febd69;
   border: none;
   cursor: pointer;
@@ -136,14 +122,15 @@ label {
 .searchButton:hover {
   background: #ffa734;
 }
+
 .searchButton img {
   width: 30px;
 }
 
 .usaDiv {
   padding-left: 20px;
-  align-self: center;
-  justify-content: center;
+  /* align-self: center; */
+  /* justify-content: center; */
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -161,10 +148,6 @@ label {
   outline: none;
   border: none;
 }
-/* 
-.usaDiv:hover {
-  border: 1px solid #ffffff;
-} */
 
 .usaLogo {
   width: 25px;
@@ -191,7 +174,7 @@ label {
   font-family: "Amazon Ember1";
   font-size: medium;
   background-color: rgb(19, 25, 33);
-  color: #ffffff;
+  color: #ffffff;  
   font-size: medium;
   /* font-weight: bold; */
   width: 115px;
@@ -327,6 +310,7 @@ label {
 .toggleInput:checked + .toggleLabel::before {
   left: 26px;
 }
+
 
 /* Responsiveness code heree */
 @media (max-width: 1000px) {

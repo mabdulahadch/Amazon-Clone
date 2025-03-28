@@ -153,7 +153,7 @@ function renderCards() {
     console.error('No element with class "mainContainer" found.');
     return;
   }
-  mainContainer.innerHTML = ""; // Clear existing content
+  // mainContainer.innerHTML = "";
 
   cardData.forEach((card) => {
     const cardElement = document.createElement("cardModel");
@@ -183,25 +183,24 @@ function renderCards() {
 
 renderCards();
 
-
-document.querySelectorAll('.addCartBtn').forEach(button => {
-    button.addEventListener('click', addCart);
+document.querySelectorAll(".addCartBtn").forEach((button) => {
+  button.addEventListener("click", addCart);
 });
 
-document.querySelectorAll('.removeCartBtn').forEach(button => {
-    button.addEventListener('click', removeCart);
+document.querySelectorAll(".removeCartBtn").forEach((button) => {
+  button.addEventListener("click", removeCart);
 });
 
 function addCart() {
-    let ele = document.getElementById('cartId');
-    let currentCount = parseInt(ele.textContent, 10);
-    ele.textContent = currentCount + 1;
+  let ele = document.getElementById("cartId");
+  let currentCount = parseInt(ele.textContent, 10);
+  ele.textContent = currentCount + 1;
 }
 
 function removeCart() {
-    let ele = document.getElementById('cartId');
-    let currentCount = parseInt(ele.textContent, 10);
-    if (currentCount > 0) {
-        ele.textContent = currentCount - 1;
-    }
+  let ele = document.getElementById("cartId");
+  let currentCount = parseInt(ele.textContent, 10);
+  if (currentCount > 0) {
+    ele.textContent = currentCount - 1;
+  }
 }

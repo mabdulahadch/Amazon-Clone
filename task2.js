@@ -21,3 +21,17 @@ function squareFunction(arr) {
 const arr = [10, 5, 8, 2, 6];
 console.log("Double the array = ", processArray(arr, doubleFunction));
 console.log("Square the array = ", processArray(arr, squareFunction));
+
+// function greet(name, callback) {
+//   // console.log("Hello, " + name);
+//   setTimeout(() => {
+//     console.log("This runs after 2 seconds");
+// }, 2000);
+//   callback();
+// }
+
+// function afterGreeting() {
+//   console.log("How are you?");
+// }
+
+// greet("Ahad", afterGreeting);
